@@ -39,11 +39,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_KitapId = new System.Windows.Forms.TextBox();
             this.txt_Stok = new System.Windows.Forms.TextBox();
-            this.txt_Yazar = new System.Windows.Forms.TextBox();
             this.txt_Ad = new System.Windows.Forms.TextBox();
             this.cms_Kitap = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmb_Yazar = new System.Windows.Forms.ComboBox();
             this.cms_Kitap.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             // 
             // Btn_Guncelle
             // 
-            this.Btn_Guncelle.Location = new System.Drawing.Point(463, 228);
+            this.Btn_Guncelle.Location = new System.Drawing.Point(446, 231);
             this.Btn_Guncelle.Name = "Btn_Guncelle";
             this.Btn_Guncelle.Size = new System.Drawing.Size(80, 45);
             this.Btn_Guncelle.TabIndex = 30;
@@ -75,7 +75,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(313, 193);
+            this.label5.Location = new System.Drawing.Point(296, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 28;
@@ -84,7 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(306, 155);
+            this.label4.Location = new System.Drawing.Point(289, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 27;
@@ -93,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 115);
+            this.label2.Location = new System.Drawing.Point(276, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 25;
@@ -101,7 +101,7 @@
             // 
             // btn_Ekle
             // 
-            this.btn_Ekle.Location = new System.Drawing.Point(366, 228);
+            this.btn_Ekle.Location = new System.Drawing.Point(349, 231);
             this.btn_Ekle.Name = "btn_Ekle";
             this.btn_Ekle.Size = new System.Drawing.Size(80, 45);
             this.btn_Ekle.TabIndex = 24;
@@ -111,7 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(294, 77);
+            this.label1.Location = new System.Drawing.Point(277, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 23;
@@ -119,28 +119,21 @@
             // 
             // txt_KitapId
             // 
-            this.txt_KitapId.Location = new System.Drawing.Point(366, 74);
+            this.txt_KitapId.Location = new System.Drawing.Point(349, 77);
             this.txt_KitapId.Name = "txt_KitapId";
             this.txt_KitapId.Size = new System.Drawing.Size(112, 20);
             this.txt_KitapId.TabIndex = 22;
             // 
             // txt_Stok
             // 
-            this.txt_Stok.Location = new System.Drawing.Point(366, 190);
+            this.txt_Stok.Location = new System.Drawing.Point(349, 193);
             this.txt_Stok.Name = "txt_Stok";
             this.txt_Stok.Size = new System.Drawing.Size(177, 20);
             this.txt_Stok.TabIndex = 20;
             // 
-            // txt_Yazar
-            // 
-            this.txt_Yazar.Location = new System.Drawing.Point(366, 152);
-            this.txt_Yazar.Name = "txt_Yazar";
-            this.txt_Yazar.Size = new System.Drawing.Size(177, 20);
-            this.txt_Yazar.TabIndex = 19;
-            // 
             // txt_Ad
             // 
-            this.txt_Ad.Location = new System.Drawing.Point(366, 112);
+            this.txt_Ad.Location = new System.Drawing.Point(349, 115);
             this.txt_Ad.Name = "txt_Ad";
             this.txt_Ad.Size = new System.Drawing.Size(177, 20);
             this.txt_Ad.TabIndex = 17;
@@ -165,11 +158,20 @@
             this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.güncelleToolStripMenuItem.Text = "Güncelle";
             // 
+            // cmb_Yazar
+            // 
+            this.cmb_Yazar.FormattingEnabled = true;
+            this.cmb_Yazar.Location = new System.Drawing.Point(349, 155);
+            this.cmb_Yazar.Name = "cmb_Yazar";
+            this.cmb_Yazar.Size = new System.Drawing.Size(177, 21);
+            this.cmb_Yazar.TabIndex = 32;
+            // 
             // KitapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 450);
+            this.ClientSize = new System.Drawing.Size(532, 386);
+            this.Controls.Add(this.cmb_Yazar);
             this.Controls.Add(this.Btn_Guncelle);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -178,7 +180,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_KitapId);
             this.Controls.Add(this.txt_Stok);
-            this.Controls.Add(this.txt_Yazar);
             this.Controls.Add(this.txt_Ad);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.lst_Kitap);
@@ -203,10 +204,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_KitapId;
         private System.Windows.Forms.TextBox txt_Stok;
-        private System.Windows.Forms.TextBox txt_Yazar;
         private System.Windows.Forms.TextBox txt_Ad;
         private System.Windows.Forms.ContextMenuStrip cms_Kitap;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem güncelleToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmb_Yazar;
     }
 }

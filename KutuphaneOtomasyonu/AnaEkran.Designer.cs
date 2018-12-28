@@ -90,6 +90,7 @@
             this.MainMenuStrip = this.msEkle;
             this.Name = "AnaEkran";
             this.Text = "Ana Ekran";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.msEkle.ResumeLayout(false);
             this.msEkle.PerformLayout();
             this.ResumeLayout(false);
