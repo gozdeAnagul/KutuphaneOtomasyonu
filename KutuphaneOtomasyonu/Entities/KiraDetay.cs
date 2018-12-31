@@ -15,12 +15,12 @@ namespace KutuphaneOtomasyonu.Entities
         public int KiraDetayId { get; set; }
 
         [Required]
+        public int KiraID { get; set; }
+
+        [Required]
         [ForeignKey("KiraID")]
         public virtual Kiralanan Kiralanan { get; set; }
 
-        [Required]
-        public int KiraID { get; set; }
-       
 
         public TimeSpan KiralananGun { get; set; } = (TimeSpan)(Kiralanan.VerisTarihi - Kiralanan.AlisTarihi);
 

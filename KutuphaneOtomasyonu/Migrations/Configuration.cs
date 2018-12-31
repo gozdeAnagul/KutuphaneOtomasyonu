@@ -1,5 +1,7 @@
 namespace KutuphaneOtomasyonu.Migrations
 {
+    using KutuphaneOtomasyonu.Data;
+    using KutuphaneOtomasyonu.ViewModel;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -18,6 +20,40 @@ namespace KutuphaneOtomasyonu.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            var db = context;
+            FData mock = new FData();
+            if (!db.Yazarlar.Any())
+            {
+                foreach (var item in mock.Yazarlar)
+                {
+                    db.Yazarlar.Add(item);
+                }
+                db.SaveChanges();
+            }
+
+            if (!db.Kitaplar.Any())
+            {
+                var yazarlar = db.Yazarlar.ToList();
+                Random rnd = new Random();
+                foreach (var item in mock.Kitaplar)
+                {
+                    item.YazarID = yazarlar[rnd.Next(0, yazarlar.Count)].YazarID;
+                    db.Kitaplar.Add(item);
+                }
+                db.SaveChanges();
+                
+            }
+
+            if (!db.Uyeler.Any())
+            {
+                foreach (var item in mock.Uyeler)
+                {
+                    db.Uyeler.Add(item);
+                }
+                db.SaveChanges();
+            }
+
         }
     }
 }

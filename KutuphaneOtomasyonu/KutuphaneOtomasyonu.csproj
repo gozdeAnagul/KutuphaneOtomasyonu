@@ -38,6 +38,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FakeData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeData.1.0.0\lib\FakeData.dll</HintPath>
+    </Reference>
+    <Reference Include="MockData, Version=0.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MockData.0.0.6\lib\net40\MockData.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,11 +64,15 @@
     <Compile Include="AnaEkran.Designer.cs">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="Business\KitapBusiness.cs" />
+    <Compile Include="Business\UyeBusiness.cs" />
+    <Compile Include="Business\YazarBusiness.cs" />
     <Compile Include="Entities\Kiralanan.cs" />
     <Compile Include="Entities\KiraDetay.cs" />
     <Compile Include="Entities\Kitap.cs" />
     <Compile Include="Entities\Uye.cs" />
     <Compile Include="Entities\Yazar.cs" />
+    <Compile Include="Data\FData.cs" />
     <Compile Include="KiraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +85,10 @@
     <Compile Include="KitapForm.Designer.cs">
       <DependentUpon>KitapForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812310622124_a1.cs" />
+    <Compile Include="Migrations\201812310622124_a1.Designer.cs">
+      <DependentUpon>201812310622124_a1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Program.cs" />
@@ -85,6 +99,9 @@
     <Compile Include="UyeForm.Designer.cs">
       <DependentUpon>UyeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\KitapViewModel.cs" />
+    <Compile Include="ViewModel\UyeViewModel.cs" />
+    <Compile Include="ViewModel\YazarViewModel.cs" />
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitapForm.resx">
       <DependentUpon>KitapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812310622124_a1.resx">
+      <DependentUpon>201812310622124_a1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,6 +140,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

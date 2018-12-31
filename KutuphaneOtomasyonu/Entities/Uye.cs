@@ -34,7 +34,7 @@ namespace KutuphaneOtomasyonu.Entities
         [StringLength(11, ErrorMessage = "telefon 11 karakterden fazla olamaz!")]
         public string UyeTelefon { get; set; }
 
-        [StringLength(11, ErrorMessage = "E-Mail 11 karakterden fazla olamaz!")]
+        [StringLength(20, ErrorMessage = "E-Mail 20 karakterden fazla olamaz!")]
         [EmailAddress(ErrorMessage ="Geçersiz E-Mail adresi")]
         public string UyeEMail { get; set; }
 

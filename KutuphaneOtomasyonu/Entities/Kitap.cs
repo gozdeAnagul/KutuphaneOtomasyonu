@@ -19,10 +19,11 @@ namespace KutuphaneOtomasyonu.Entities
         public string KitapAdi { get; set; }
 
         [Required]
+        public int YazarID { get; set; }
+
+        [Required]
         [ForeignKey("YazarID")]
         public virtual Yazar Yazar { get; set; }
-
-        public int YazarID { get; set; }
 
         [Required]
         public short Stok { get; set; }
