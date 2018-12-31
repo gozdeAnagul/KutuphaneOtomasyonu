@@ -14,7 +14,9 @@ namespace KutuphaneOtomasyonu.Data
     public class FData
     {
         public MyContext MyContext { get; set; }
-
+        public List<Uye> Uyeler { get; set; } = new List<Uye>();
+        public List<Yazar> Yazarlar { get; set; } = new List<Yazar>();
+        public List<Kitap> Kitaplar { get; set; } = new List<Kitap>();
         public FData()
         {
             MyContext = new MyContext();
